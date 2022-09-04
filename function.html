@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belajar Javascript Skilvul</title>
+</head>
+<body>
+  
+<script>
+
+// Contoh Function tanpa variable
+
+let umurKu = 20
+
+function tambahNilai() {
+  return "umur ku di tahun ini adalah " + umurKu;
+}
+
+console.log(tambahNilai());
+
+
+
+
+// Objek Javascript
+
+// Membuat method suara ke dalam objek
+let kucing = {
+  warna: "Kuning",
+  umur: 2,
+  suara: function(){
+    return "Meong";
+  }
+}
+
+console.log(kucing.suara()); //Output: Meong
+
+
+// Menambahkan Properti Pada Objek
+
+let kucing2 = {
+  warna: "Kuning",
+  umur: 2,
+}
+
+kucing2.warnaMata = "Hitam";
+
+console.log(kucing2);
+
+
+
+
+
+// Array Javascript
+
+let hewan = ["kucing", "anjing", "hewan"]
+
+hewan[4] = "ayam";
+
+console.log(hewan.length); // untuk menghitung jumlah array
+console.log(hewan[1]); // untuk mengakses array yang kedua
+
+
+
+
+
+console.log(hewan.toString()) // Convert Menjadi String
+
+let array = [1,2,3, "gasken", "monyet", false, true]; 
+// menentukan karakter apa yang mau ditambahkan sebagai penghubung antara element array
+// console.log(array.join()); // Output: 1,2,3,gasken, monyet, false, true
+// console.log(array.join("-")); // Output: 1-2-3-gasken-monyet-false-true
+
+
+array.pop(); // Untuk membuang array yang terakhir
+array.push(12); // Untuk menambahkan array di akhir
+array.shift(); // Untuk mengeluarkan array pertama
+array.unshift("Pagi") // Untuk Menambah array di awal
+
+console.log(array);
+
+
+
+
+// Menambah, Menghapus, dan Mengganti Element Array dengan splice()
+
+let hewanPelihara = ["ayam", "kucing", "anjing", "monyet"];
+hewanPelihara.splice(2,1, "bebek", "kelinci");
+
+// Parameter pertama bernilai 2, mendefinisikan posisi di mana element baru harus ditambahkan, yaitu di index ke 2 atau element ke 3 (ingat, index di array dimulai dari angka 0). Parameter kedua bernilai 0, mendefinisikan jumlah element yang harus dihapus, yaitu berjumlah 0 (tidak ada yang dihapus). Parameter ketiga, keempat, dan seterusnya di method splice() mendefinisikan element baru yang ingin ditambahkan ke dalam array.
+
+console.log(hewanPelihara);
+
+
+
+
+// Menggabungkan lebih dari 1 array 
+
+let buah = ["pisang", "apel", "jeruk"];
+let sayur = ["tomat", "bayam", "wortel"];
+let biji = ["kedelai", "kacang tanah", "kacang polong"];
+
+let makanan = buah.concat(sayur, biji);
+
+console.log(makanan); // Output: ["pisang", "apel", "jeruk", "tomat", "bayam", "wortel", "kedelai", "kacang tanah", "kacang polong"]
+
+
+
+
+
+
+
+// Perulangan for untuk mengulang operasi dengan batas yang ditentukan
+
+
+// let angka = [1, 46, 75, 12, 89, 54, 101];
+// let genap = [];
+// let ganjil = [];
+
+// // Tulis kode kalian di bawah ini
+
+// for(let i = 0; i < angka.length; i++){
+//     if(angka[i] % 2 == 0){
+//         genap.push(angka[i]);
+//     }else{
+//         ganjil.push(angka[i]);
+//     }
+// }
+
+// console.log(genap);
+// console.log(ganjil);
+
+
+// Perulangan for of  untuk menanmpilkan element pada array
+
+// let angka = [1, 46, 75, 12, 89, 54, 101];
+// let ganjil = [];
+
+// // Tulis kode kalian di bawah ini
+// for(let x of angka){
+//     if(x % 2 == 1){
+//         ganjil.push(x);
+//     }
+// }
+
+// console.log(ganjil);
+
+
+
+//  Perulangan while
+
+// let angka = [];
+// let i = 1;
+
+// // Tulis kode kalian di bawah ini
+// while(i <= 5){
+//      if(i % 2 == 1){
+//         angka.push(i);
+//         console.log(i, "ini bilangan ganjil")
+//      } else {
+//       angka.push(i);
+//       console.log(i, "ini bilangan genap")
+//      }
+//     i++;
+// }
+
+
+// Perulangan Do While
+
+let angka = [];
+let i = 5;
+
+// Ubah kode loop di bawah ini
+do {
+  angka.push(i);
+  console.log(i)
+  i++;
+} while(i <= 10)
+
+
+// Rest Parameter sebagi parameter yang mewakili semua parameter
+
+const bar = (param1, param2, ...params) => {
+  console.log("Argument pertama ", param1);
+  console.log("Argument pertama ", param2);
+  console.log("Sisa argument ", params);
+}
+
+bar("A", "B", "C", "D", "E");
+// Output:
+// Argument pertama  A
+// Argument pertama  B
+// Sisa argument ["C", "D", "E"]
+
+
+
+// Spread Operator
+
+let namaBuah1 = ['apel', 'mangga'];
+let namaBuah2 = ['sirsak', 'semangka'];
+
+
+// Tulis kode kalian di bawah ini
+
+let semuaNamaBuah = [...namaBuah1, ...namaBuah2];
+
+console.log(semuaNamaBuah);
+
+
+</script>
+
+</body>
+</html>
